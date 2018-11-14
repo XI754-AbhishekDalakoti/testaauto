@@ -1,0 +1,7 @@
+--- 
+Au:
+  baseURL: "https://192.168.243.1:3512"
+  authenticationKey: bearer a0e5300b-4bb5-43f8-99fe-0bef74687946
+MI: 
+  baseURL: "https://reqres.in"
+  #baseURL: "http://192.168.3.241:32512"

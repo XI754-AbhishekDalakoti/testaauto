@@ -1,0 +1,11 @@
+{
+   "data":[
+      {
+         "originCityCode":"ac",
+         "destinationCityCode":"WC",
+         "ekShare":7,
+         "ekViable":true,
+         "odPair":"NYC_WC"
+      }
+   ]
+}

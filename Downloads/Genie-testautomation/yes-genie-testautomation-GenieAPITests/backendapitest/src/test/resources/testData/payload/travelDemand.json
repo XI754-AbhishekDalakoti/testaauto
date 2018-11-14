@@ -1,0 +1,32 @@
+{
+   "data":[
+      {
+         "odPair":"NYC_CPT",
+         "totalSpend":263758,
+         "travelersCount":356,
+         "year":2018,
+         "month":2
+      },
+      {
+         "odPair":"NYC_CPT",
+         "totalSpend":35,
+         "travelersCount":3,
+         "year":2018,
+         "month":6
+      },
+      {
+         "odPair":"NYC_SIN",
+         "totalSpend":4353,
+         "travelersCount":53,
+         "year":2018,
+         "month":2
+      },
+      {
+         "odPair":"NYC_WC",
+         "totalSpend":4354,
+         "travelersCount":24,
+         "year":2018,
+         "month":2
+      }
+   ]
+}

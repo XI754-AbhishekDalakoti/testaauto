@@ -1,0 +1,65 @@
+/target
+/Screenshots
+.classpath
+
+
+# IntelliJ
+.idea/artifacts
+.idea/compiler.xml
+.idea/misc.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
+src/.idea/misc.xml
+src/.idea/modules.xml
+src/.idea/src.iml
+src/.idea/workspace.xml
+
+# IntelliJ
+out/
+
+#Project
+.project
+
+#iml file
+YesBankGenieWebAuto.iml
+<<<<<<< HEAD
+=======
+yes-genie-testautomation-GenieUITest.iml
+>>>>>>>  Test added for Refined Search
+
+#Gradle
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+#settings
+.settings/org.eclipse.core.resources.prefs
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+
+#build
+build/
+
+
+#out
+out/
+
+#chromedriver
+chromedriver.exe
+
+#plugin
+cluecumber-report-plugin-1.4.1.jar
+
+
+selenium-cucumber-java-0.0.1.pom 
+
+<<<<<<< HEAD
+
+
+
+=======
+#Configuration
+Configuration.properties
+>>>>>>>  Test added for Refined Search

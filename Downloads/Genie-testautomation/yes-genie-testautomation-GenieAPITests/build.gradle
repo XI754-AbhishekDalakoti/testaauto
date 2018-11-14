@@ -1,0 +1,77 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'sc-java-testing'
+version = '0.0.1-SNAPSHOT'
+
+
+description = "Regression and Smoke Test"
+
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+
+repositories {
+
+    maven { url "https://jitpack.io" }
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+
+test << {
+
+    testLogging.showStandardStreams =true
+    systemProperties System.getProperties()
+}
+
+configurations
+        {
+            cucumberRuntime
+                    {
+                        extendsFrom testRuntime
+                    }
+        }
+
+task cucumber(){
+    dependsOn assemble, compileTestJava, testClasses
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.test.output + sourceSets.main.output
+            args = ['--plugin', 'pretty','--glue','src/test/java/info/seleniumcucumber/userStepDefintions','src/test/resources/features']
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'com.vimalselvam', name: 'cucumber-extentsreport', version:'3.0.0'
+    testCompile group: 'info.cukes', name: 'cucumber-java', version:'1.2.5'
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version:'1.2.5'
+    testCompile group: 'info.cukes', name: 'cucumber-java', version:'1.2.5'
+    testCompile group: 'info.cukes', name: 'cucumber-core', version:'1.1.8'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.5.2'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-server', version:'3.5.2'
+    testCompile group: 'com.github.selenium-cucumber', name: 'selenium-cucumber-java', version:'1.0.1-beta'
+    testCompile group: 'io.appium', name: 'java-client', version:'5.0.4'
+    testCompile group: 'com.aventstack', name: 'extentreports', version:'3.1.2'
+}
+
+
+
+dependencies {
+    compile group: 'com.vimalselvam', name: 'cucumber-extentsreport', version:'3.0.0'
+    compile group: 'info.cukes', name: 'cucumber-java', version:'1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-junit', version:'1.2.5'
+    compile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version:'3.5.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version:'3.5.2'
+    compile group: 'com.github.selenium-cucumber', name: 'selenium-cucumber-java', version:'1.0.1-beta'
+    compile group: 'io.appium', name: 'java-client', version:'5.0.4'
+    compile group: 'com.aventstack', name: 'extentreports', version:'3.1.2'
+}
+
+

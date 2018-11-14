@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-03/schema#",
+  "type": "object",
+  "properties": {
+    "marketId": {
+      "$id": "/properties/marketId",
+      "type": "string",
+      "required": true
+    },
+    "region": {
+      "$id": "/properties/region",
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "$id": "/properties/country",
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "$id": "/properties/city", 
+      "type": "string",
+      "required": true
+    },
+    "cityCode": {
+      "$id": "/properties/cityCode",
+      "type": "string",
+      "required": true
+    },
+    "cityRank": {
+      "$id": "/properties/cityRank",
+      "type": "integer",
+      "required": true
+    },
+    "cityCountryRank": {
+      "$id": "/properties/cityCountryRank", 
+      "type": "integer",
+      "required": true
+    },
+    "created": {
+      "$id": "/properties/created", 
+      "type": "string",
+      "required": true
+    },
+    "latitude": {
+      "$id": "/properties/latitude",
+      "type": "number",
+      "required": true
+    },
+    "longitude": {
+      "$id": "/properties/longitude",
+      "type": "number",
+      "required": true
+    }
+  }
+}

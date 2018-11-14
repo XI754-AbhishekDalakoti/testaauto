@@ -1,0 +1,41 @@
+{
+   "data":[
+      {
+         "odPair":"NYC_CPT",
+         "productCategory":"hotels",
+         "productName":"Cape Grace Hotel",
+         "operator":"Viator",
+         "inCatalogue":false,
+         "rank":1,
+         "searchVolume":6256
+      },
+      {
+         "odPair":"NYC_CPT",
+         "productCategory":"hotels",
+         "productName":"Cape Town :Garden Route",
+         "operator":"GetYourGuide",
+         "inCatalogue":true,
+         "rank":2,
+         "searchVolume":1623
+      },
+      {
+         "odPair":"NYC_CPT",
+         "productCategory":"hotels",
+         "productName":"Wheel of excellence",
+         "operator":"GetYourGuide",
+         "inCatalogue":true,
+         "rank":3,
+         "searchVolume":878
+      },
+      {
+         "odPair":"NYC_CPT",
+         "productCategory":"nature and wildlife",
+         "productSubcategory":"safari",
+         "productName":"Cape Town Safari Full Day Tour",
+         "operator":"Viator",
+         "inCatalogue":false,
+         "rank":21,
+         "searchVolume":13141
+      }
+   ]
+}

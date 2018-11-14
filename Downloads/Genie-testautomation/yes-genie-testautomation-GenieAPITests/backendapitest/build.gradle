@@ -1,0 +1,63 @@
+repositories {
+        mavenCentral()
+    maven {
+        url "https://jcenter.bintray.com"
+    }
+}
+
+def serenityVersion = '1.2.5-rc.11'
+def cucumberVersion = '1.1.29'
+
+buildscript {
+    repositories {
+            mavenCentral()
+    maven {
+        url "https://jcenter.bintray.com"
+    }
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.2.5-rc.11")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+dependencies {
+    testCompile "net.serenity-bdd:serenity-core:${serenityVersion}"
+    testCompile "net.serenity-bdd:serenity-cucumber:${cucumberVersion}"
+    testCompile "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    testCompile('junit:junit:4.12')
+    testCompile('org.assertj:assertj-core:3.3.0')
+    testCompile('org.slf4j:slf4j-simple:1.7.13')
+    testCompile fileTree(dir: 'src/test/java/libs', include: ['*.jar'])
+    testCompile 'com.galenframework:galen-java-support:2.3.1'
+    testCompile 'io.rest-assured:rest-assured:3.0.7'
+    testCompile 'io.rest-assured:json-schema-validator:3.0.3'
+    testCompile "net.serenity-bdd:serenity-rest-assured:${serenityVersion}"
+	testCompile "org.yaml:snakeyaml:1.8"
+	testCompile "com.github.fge:json-schema-core:1.2.5"
+}
+
+test{
+    testLogging{
+        showStandardStreams=true
+    }
+    testLogging.exceptionFormat = 'full'
+}
+
+tasks.withType(Test) {
+	maxParallelForks = 10
+	forkEvery = 30
+    systemProperty "GRADLE_OPTS", "-Xms256m -Xmx256m"
+    systemProperty "properties", System.getProperty("serenity.properties")
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+    systemProperty "webdriver.base.url", System.getProperty("webdriver.base.url")
+    testLogging {
+        events "standardOut", "started", "passed", "skipped", "failed"
+    }
+}
+
+gradle.startParameter.continueOnFailure = true

@@ -1,0 +1,11 @@
+{
+    "data": [{
+        "incomeGroup": "Upto 50K",
+        "category": "Food",
+        "spendAmount": 327,
+        "year": 2018,
+        "month": 4,
+        "perCapita": 30,
+        "odPair": "NYC_CPT"
+    }]
+}

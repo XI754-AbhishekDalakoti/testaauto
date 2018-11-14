@@ -1,0 +1,57 @@
+{
+  "consumer": {
+    "name": "Abhishek"
+  },
+  "provider": {
+    "name": "Akshay"
+  },
+  "interactions": [{
+    "id": "My test",
+    "providerState": "User ",
+    "request": {
+      "method": "POST",
+      "path": "/users/searchresults",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "searchQuery": "Abhishek",
+        "isCustomerId": true,
+        "threshold": 50
+      }
+    },
+    "response": {
+      "status": 200,
+      "records": [{
+        "mdmId": 809725,
+        "custId": 250115,
+        "customerName": "Chandan Verma",
+        "custSearchEnabled": true,
+        "DOB": "08/09/2018",
+        "addressCity": "Mumbai",
+        "addressArea": "MMMRoad",
+        "homeBranch": "Fort,Mumbai",
+        "assetRM": "Sandeep Kumar",
+        "liabilityRM": "Rahul Rawel",
+        "groupID": 274334,
+        "businessSegment": "BRB",
+        "partnerSegment": "BRB",
+        "custOpenDate": "01/01/2004"
+      }],
+      "count": 10,
+      "searchParams": [{
+        "mdmId": 809725
+      }]
+
+    }
+  }],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
+
+
+
+

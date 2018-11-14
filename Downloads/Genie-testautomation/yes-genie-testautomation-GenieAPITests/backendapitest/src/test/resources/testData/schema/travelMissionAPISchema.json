@@ -1,0 +1,58 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "data": {
+      "$id": "/properties/data",
+      "type": "array",
+      "items": {
+        "$id": "/properties/data/items",
+        "type": "object",
+        "properties": {
+          "id": {
+            "$id": "/properties/data/items/properties/id",
+            "type": "string"
+          },
+          "odPair": {
+            "$id": "/properties/data/items/properties/odPair",
+            "type": "string"
+          },
+          "mission1": {
+            "$id": "/properties/data/items/properties/mission1",
+            "type": "string"
+          },
+          "mission2": {
+            "$id": "/properties/data/items/properties/mission2",
+            "type": "string"
+          },
+          "mission3": {
+            "$id": "/properties/data/items/properties/mission3",
+            "type": "string"
+          },
+          "year": {
+            "$id": "/properties/data/items/properties/year",
+            "type": "number"
+          },
+          "month": {
+            "$id": "/properties/data/items/properties/month",
+            "type": "number"
+          },
+          "travellersCount": {
+            "$id": "/properties/data/items/properties/travellersCount",
+            "type": "number"
+          },
+          "destinationSpendAmount": {
+            "$id": "/properties/data/items/properties/destinationSpendAmount",
+            "type": "number"
+          },
+          "created": {
+            "$id": "/properties/data/items/properties/created",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "originType": {
+      "$id": "/properties/originType",
+      "type": "string"
+    },
+    "originCityCode": {
+      "$id": "/properties/originCityCode",
+      "type": "string"
+    },
+    "totalSpend": {
+      "$id": "/properties/totalSpend",
+      "type": "number"
+    },
+    "results": {
+      "$id": "/properties/results",
+      "type": "array",
+      "items": {
+        "$id": "/properties/results/items",
+        "type": "object",
+        "properties": {
+          "travelersCount": {
+            "$id": "/properties/results/items/properties/travelersCount",
+            "type": "number"
+          },
+          "year": {
+            "$id": "/properties/results/items/properties/year",
+            "type": "number"
+          },
+          "totalSpend": {
+            "$id": "/properties/results/items/properties/totalSpend",
+            "type": "number"
+          },
+          "destinationCountry": {
+            "$id": "/properties/results/items/properties/destinationCountry",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

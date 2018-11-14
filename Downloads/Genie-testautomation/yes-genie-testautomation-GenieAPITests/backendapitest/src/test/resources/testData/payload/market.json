@@ -1,0 +1,14 @@
+{
+   "data":[
+      {
+         "city":"Cape Town",
+         "cityCode":"CPT",
+         "country":"South Africa",
+         "region":"Africa",
+         "latitude":33.9249,
+         "longitude":13.5555,
+         "cityRank":"5",
+         "cityCountryRank":33
+      }
+   ]
+}
